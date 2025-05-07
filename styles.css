@@ -1,0 +1,109 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #e8f5e9;
+  height: 100%;
+}
+#app-container {
+  max-width: 390px;
+  height: 844px;
+  margin: auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#login-panel, #register-panel {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  padding: 10px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#search-panel {
+  padding: 10px;
+  background: #a5d6a7;
+  display: flex;
+  gap: 10px;
+}
+#map {
+  flex: 1;
+}
+
+/* Animación de búsqueda */
+#loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+}
+
+.loading-spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loading p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #3498db;
+}
+
+
+/* Hacer el mapa en formato vertical, como si fuera una app */
+#map {
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Barra de búsqueda */
+#search-bar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Ajustar el botón de búsqueda */
+#search-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

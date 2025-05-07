@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ParkMap Madrid</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app-container">
+    <div id="login-panel">
+      <h2>Inicia sesión</h2>
+      <input type="text" id="email" placeholder="Correo" />
+      <input type="password" id="password" placeholder="Contraseña" />
+      <button onclick="login()">Entrar</button>
+      <p>¿No tienes cuenta? <a href="#" onclick="showRegister()">Regístrate</a></p>
+    </div>
+	<div id="loading" style="display: none;">
+    <div class="loading-spinner"></div>
+    <p>Buscando aparcamiento...</p>
+</div>
+
+    <div id="register-panel" style="display:none;">
+      <h2>Registro</h2>
+      <input type="text" id="newEmail" placeholder="Correo" />
+      <input type="password" id="newPassword" placeholder="Contraseña" />
+      <button onclick="register()">Registrar</button>
+      <p>¿Ya tienes cuenta? <a href="#" onclick="showLogin()">Iniciar sesión</a></p>
+    </div>
+    <div id="search-panel" style="display:none;">
+      <input id="destination" type="text" placeholder="¿Dónde quieres aparcar?" />
+      <button onclick="findParking()">Ir</button>
+    </div>
+    <div id="map"></div>
+  </div>
+  <script src="script.js"></script>
+  <script src="auth.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTvdb_c8ywjd0yMHfdyFC-M2TtMHIcGrk&libraries=places&callback=initMap"></script>
+</body>
+</html>
